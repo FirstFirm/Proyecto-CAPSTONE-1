@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="2_EstiloFirma.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="descripcion">
+      <h1>Ingresa tus datos con tu carnet en mano.</h1>
+    </div>
+    <div class="data">
+      <div class="card_data">
+        <h2 id="h2_data">Rellena los campos según se indica.</h2>
+        <hr>
+        <label class="label-input" for="rut">Ingresa tu RUT:</label>
+        <input class="label-input" id="rut" name="rut" type="text" pattern="[a-z0-5]{8,}" required />
+        <label class="label-input" name="num_cedula">ingrese su numero de cedula de identidad: </label>
+        <input class="label-input" id="num_cedula" name="num_cedula" type="text" pattern="[a-z0-5]{8,}" required />
+        <label class="label-input" for="rut_sostenedor">Ingrese el rut de su sostenedor: </label>
+        <input class="label-input" id="rut_sostenedor" name="rut_sostenedor" type="text" pattern="[a-z0-5]{8,}" required />
+        <label class="label-input" for="num_cedula_sostenedor">ingrese el numero de cedula de identidad de su sostenedor: </label>
+        <input class="label-input" id="num_cedula_sostenedor" name="num_cedula_sostenedor" type="text" pattern="[a-z0-5]{8,}" required />
+        <hr>
+        <input type="submit" value="Enviar" />
+      </div>
+    </div>
+  </body>
+</html>
