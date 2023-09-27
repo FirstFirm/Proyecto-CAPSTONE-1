@@ -4,7 +4,7 @@ from django.db import models
 class Titulado(models.Model):
     Run = models.CharField(max_length=11, unique=True)
     Nombres = models.CharField(max_length=50)
-    ApelidoP = models.CharField(max_length=50)
+    ApellidoP = models.CharField(max_length=50)
     ApellidoM = models.CharField(max_length=50)
     NCeluda = models.CharField(max_length=10)
     Celular = models.CharField(max_length=10)
@@ -12,4 +12,5 @@ class Titulado(models.Model):
     Contrasena = models.CharField(max_length=50)
     Carrera = models.CharField(max_length=50)
     Codigo = models.IntegerField(unique=True)
-    #Archivos ordenados
+    Invitado1 = models.CharField(max_length=50, null=True, blank=True)
+    Invitado2 = models.CharField(max_length=50, null=True, blank=True)
