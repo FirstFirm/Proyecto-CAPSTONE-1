@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asiento {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: 1px solid #888;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.empty {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    pointer-events: none;
+}
+
+.aisle {
+    width: 10px; /* Ancho del pasillo vertical */
+    height: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    margin: 2px;
+    pointer-events: none;
+}
+
+.confirmar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.confirmar:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        max-width: 95%; /* Ancho máximo más pequeño en pantallas pequeñas */
+    }
+    
+    .asiento {
+        width: 20px; /* Tamaño de asientos más pequeños en pantallas pequeñas */
+        height: 20px;
+    }
+    
+    .aisle {
+        width: 5px; /* Tamaño del pasillo más pequeño en pantallas pequeñas */
+    }
+}

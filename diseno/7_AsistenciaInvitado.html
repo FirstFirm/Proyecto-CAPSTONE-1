@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="7_AsistenciaInvitadoEstilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="descripcion">
+        <h1>Ingresa los datos de quienes te acompañarán a tu ceremonia</h1>
+        <p>- La entrada de invitados es opcional por parte del titulado.</p>
+        <p>- Como máximo solo 2 personas pueden acompañar al titulado.</p>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="Logo DUOC UC">
+        </div>
+        <ul class="sidebar-menu">
+            <li>Registrar firma electrónica de asistencia</li>
+            <li>Registro de invitado</li>
+            <li>Ver detalles de firma electrónica</li>
+        </ul>
+    </div>
+    
+    <div class="data">
+        <div class="card-data">
+            <h2 id="h2-data">Rellena los campos según se indica.</h2>
+            <hr>
+            <label class="label-input" for="nombre-acompanante1">Nombre completo de tu primer acompañante:</label>
+            <input class="input" id="nombre-acompanante1" name="nombre-acompanante1" type="text" pattern="[a-z0-5]{8,}" placeholder="Opcional"/>
+            <label class="label-input" for="nombre-acompanante2">Nombre completo de tu segundo acompañante: </label>
+            <input class="input" id="nombre-acompanante2" name="nombre-acompanante2" type="text" pattern="[a-z0-5]{8,}" placeholder="Opcional" />
+            <hr>
+            <input type="submit" value="Confirmar Asistencia" />
+        </div>
+    </div>
+</body>
+</html>
