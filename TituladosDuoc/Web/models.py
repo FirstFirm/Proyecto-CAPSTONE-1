@@ -12,3 +12,4 @@ class Titulado(models.Model):
     Contrasena = models.CharField(max_length=50)
     Carrera = models.CharField(max_length=50)
     Codigo = models.IntegerField(unique=True)
+    #Archivos ordenados
