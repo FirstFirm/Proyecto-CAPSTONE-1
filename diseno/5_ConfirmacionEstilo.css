@@ -76,6 +76,12 @@ input[type="submit"]:hover {
   top: 0;
   left: 0;
   overflow-y: auto;
+  text-align: start;
+}
+
+a {
+  color: var(--blanco);
+  text-decoration: none;
 }
 
 .sidebar-header {

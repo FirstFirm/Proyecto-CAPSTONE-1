@@ -25,6 +25,57 @@
     align-items: center;
     min-height: 100vh;
   }
+
+  .sidebar {
+    background-color: var(--azul);
+    color: var(--blanco);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header img {
+    width: 150px;
+    max-width: 100%;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+    background-color: var(--amarillo);
+    color: var(--azul);
+}
+
+.sidebar-menu li:first-child {
+    border-top: 2px solid var(--amarillo);
+}
+
+.sidebar-menu li:last-child {
+    border-bottom: 2px solid var(--amarillo);
+}
   
   /* Leyenda H1 <h1>Ingresa tus datos con tu carnet en mano.</h1> */
   .descripcion {

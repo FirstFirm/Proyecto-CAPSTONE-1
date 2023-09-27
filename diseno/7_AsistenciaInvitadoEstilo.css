@@ -29,6 +29,10 @@ body {
     min-height: 100vh;
 }
 
+p {
+    color: var(--color-blanco);
+}
+
 /* Estilos para el sidebar */
 .sidebar {
     background-color: var(--color-azul);
@@ -39,6 +43,11 @@ body {
     top: 0;
     left: 0;
     overflow-y: auto;
+}
+
+a {
+    color: var(--color-blanco);
+    text-decoration: none;
 }
 
 .sidebar-header {
@@ -150,13 +159,13 @@ input[type="submit"] {
     border: none;
     border-radius: 8px; 
     cursor: pointer;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
+    display: block; 
 }
 
 input[type="submit"]:hover {
     background-color: #003669;
     font-weight: bold;
-    transform: scale(1.05);
 }
 
 /* Media queries para responsividad */
