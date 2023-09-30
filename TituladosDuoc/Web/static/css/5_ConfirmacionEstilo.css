@@ -14,7 +14,8 @@ html {
 }
 
 body {
-  background-color: var(--blanco);
+  background-color: var(--azul);
+  background-image: url(https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -24,11 +25,25 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -3.3%;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(0.3px);
+  z-index: -1;
+}
+
 
 .header, .sidebar {
   text-align: center;
-  color: var(--azul);
+  color: var(--blanco);
 }
 
 .header .user, .sidebar img {
@@ -44,16 +59,21 @@ body {
   text-align: justify;
   width: 35%;
   padding: 20px;
+  color: var(--blanco);
+  background-color: var(--azul);
+  border:  2px solid var(--amarillo);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 h1 {
   text-align: left;
-  color: var(--azul);
+  color: var(--blanco);
 }
 
 input[type="submit"] {
-  background-color: var(--azul);
-  color: var(--blanco);
+  background-color: var(--amarillo);
+  color: var(--negro);
   font-size: 1.6rem;
   padding: 1rem 2rem;
   border: none;
@@ -63,13 +83,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #003669;
-  font-weight: bold;
+  background-color: var(--amarillo);
+  border: 1px solid var(--amarillo);
 }
 
 .sidebar {
-  background-color: var(--azul);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--azul);
   width: 250px;
   height: 100%;
   position: fixed;
@@ -106,10 +126,19 @@ a {
   transition: background-color 0.3s ease;
 }
 
-.sidebar-menu li:hover {
+.sidebar-menu .li-detalle{
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   background-color: var(--amarillo);
   color: var(--azul);
 }
+
+/* .sidebar-menu li:hover {
+  background-color: var(--amarillo);
+  color: var(--azul);
+}
+*/
 
 .sidebar-menu li:first-child {
   border-top: 2px solid var(--amarillo);

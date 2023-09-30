@@ -27,55 +27,80 @@ body {
     flex-direction: column; 
     align-items: center; 
     min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
 }
 
-p {
+body::before {
+    content: '';
+    position: absolute;
+    top: -3.3%;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(0.3px);
+    z-index: -1;
+  }
+
+.descripcion p {
     color: var(--color-blanco);
+    margin-bottom: 0.5vh;
 }
 
 /* Estilos para el sidebar */
 .sidebar {
-    background-color: var(--color-azul);
-    color: var(--color-blanco);
+    background-color: var(--color-blanco-alternativo);
+    color: var(--color-azul);
     width: 250px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     overflow-y: auto;
-}
-
-a {
+    text-align: start;
+  }
+  
+  a {
     color: var(--color-blanco);
     text-decoration: none;
-}
-
-.sidebar-header {
+  }
+  
+  .sidebar-header {
     padding: 20px;
     text-align: center;
-}
-
-.sidebar-header img {
+  }
+  
+  .sidebar-header img {
     width: 150px;
     max-width: 100%;
-}
-
-.sidebar-menu {
+  }
+  
+  .sidebar-menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-.sidebar-menu li {
+  }
+  
+  .sidebar-menu li {
     padding: 15px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+  }
 
-.sidebar-menu li:hover {
+  .sidebar-menu .li-invitado{
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     background-color: var(--color-amarillo);
     color: var(--color-azul);
-}
+  }
+
+
+ /* .sidebar-menu li:hover {
+    background-color: var(--amarillo);
+    color: var(--azul);
+  }
+  */
 
 .sidebar-menu li:first-child {
     border-top: 2px solid var(--color-amarillo);
@@ -89,9 +114,14 @@ a {
 .descripcion {
     width: 100%;
     text-align: center;
+    margin: auto;
     padding: 2rem;
     margin-left: 250px;
     max-width: calc(100% - 250px);
+    display: flex; /* Agregar esta línea */
+    flex-direction: column; /* Agregar esta línea */
+    justify-content: center; /* Agregar esta línea */
+    align-items: center; /* Agregar esta línea */
 }
 
 .descripcion h1 {
@@ -101,28 +131,37 @@ a {
 }
 
 /* Estilos para la sección de datos (formulario) */
-.data {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid var(--color-amarillo);
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: calc(100% - 250px); 
+.data{
+    width: 45%; 
+    max-width: 600px;
     padding: 2rem;
+    background-color: var(--color-blanco);
+    border: 1px solid #FFB800;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem; 
-    margin-left: 250px; 
-}
+    display: flex; /* Agregar esta línea */
+    justify-content: center; /* Agregar esta línea */
+    align-items: center; /* Agregar esta línea */
+    flex-direction: column; /* Agregar esta línea */
+    position: relative;
+    bottom: 21vh;
+    left: 10%;
+    padding-left: 1px;
+    
+  }
 
-.data h2 {
+  
+  .data h2 {
     font-size: 1.8rem;
     margin: 0;
     color: var(--color-azul);
     text-align: center;
-}
+    background-color: var(--color-blanco);
+  }
 
 /* Estilos para Inputs y los labels */
 .label-input {
@@ -130,19 +169,21 @@ a {
     flex-direction: column;
     margin-bottom: 1rem;
     width: 100%;
-}
+  }
 
 label {
     font-size: 1.4rem;
     color: var(--color-negro);
     text-align: left;
     margin-bottom: 0.2rem;
-}
+  }
 
-.input {
-    padding: 1rem; 
-    border: 2px solid #ccc; 
-    border-radius: 6px; 
+.input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    width: 100%; 
 }
 
 .input:focus {
@@ -152,21 +193,23 @@ label {
 
 /* Estilos para el botón de submit */
 input[type="submit"] {
-    background-color: var(--color-azul);
-    color: var(--color-blanco);
-    font-size: 1.8rem; 
-    padding: 1.2rem 2.4rem; 
-    border: none;
-    border-radius: 8px; 
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--color-amarillo);
+    color: var(--color-terciario);
+    border: 0;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 1.5rem;
-    display: block; 
-}
+    transition: 0.5s;
+  }
 
-input[type="submit"]:hover {
+  input[type="submit"]:hover {
     background-color: #003669;
-    font-weight: bold;
-}
+    border: 1px solid var(--color-amarillo);
+    color: var(--color-blanco);
+  }
 
 /* Media queries para responsividad */
 @media screen and (max-width: 768px) {
