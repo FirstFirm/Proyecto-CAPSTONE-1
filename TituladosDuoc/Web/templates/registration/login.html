@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Registration Form</title>
+    <title>Titulados Duoc</title>
     <link rel="stylesheet" href="{% static 'css/1_EstiloLogin.css' %}" />
     <link rel="stylesheet" href="https://https://fonts.google.com/specimen/Merriweather">
   </head>
@@ -14,14 +14,14 @@
     <h2>Ingrese sus datos</h1>
     <p>Rellene los datos según las credenciales usadas durante todo el semestre.</p>
     <form method="post">
+      {% csrf_token %}
       <fieldset>
         <label for="user">Ingrese su usuario: <input id="user" name="user" type="text" required /></label>
-        <label for="password">ingrese su contraseña: <input id="password" name="password" type="password" required /></label>
+        <label for="password">Ingrese su contraseña: <input id="password" name="password" type="password" required /></label>
       </fieldset>
-      <input type="submit" onclick="redireccion()" value="Submit" />
+      <input type="submit" value="Enviar" />
 
     </form>
-    <script>function redireccion() {href = "5_confirmacion.html";}</script>
   </div>
   </body>
   </html> 

@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'Confirmacion'  # Redirección del inicio de sesión
 
 # Application definition
 
