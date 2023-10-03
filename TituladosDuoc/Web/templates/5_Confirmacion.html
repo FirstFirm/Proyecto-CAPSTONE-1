@@ -22,6 +22,7 @@
             <li>2.- Registrar firma electrónica de asistencia.</li>
             <li>3.- Registro de invitado.</li>
             <li>4.- Elección de asientos.</li>
+            <li>Sesión iniciada como: {{ user.username }} </li>
         </ul>
     </div>
     
@@ -44,7 +45,7 @@
             <li>Selecciona el lugar que eligiras para el dia de la ceremonia, teniendo en cuenta tus invitados y a ti mismo.</li>
         </ol>
         <p>Una vez que hayas firmado digitalmente, se registrará tu confirmación de asistencia y recibirás un correo electrónico de confirmación.</p>
-        <input type="submit" value="Siguiente" />
+        <a href="{% url 'firma' %}" class="btn-form">Siguiente</a>
     </div>
 </body>
 </html>

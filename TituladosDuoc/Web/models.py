@@ -14,3 +14,4 @@ class Titulado(models.Model):
     Codigo = models.IntegerField(unique=True)
     Invitado1 = models.CharField(max_length=50, null=True, blank=True)
     Invitado2 = models.CharField(max_length=50, null=True, blank=True)
+    #Quedé en asociar un usuario de django a un modelo

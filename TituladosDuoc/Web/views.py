@@ -8,8 +8,8 @@ def DisenoLogin(request):
     return render(request, '1_DisenoLogin.html')
 def DisenoFirma(request):
     return render(request, '2_DisenoFirma.html')
-def Confirmacion(request, username):
-    user = User.objects.get(username=username)
+def Confirmacion(request):
+    user = request.user  # Obtiene el usuario autenticado
     context = {'user': user}
     return render(request, '5_Confirmacion.html', context)
 
