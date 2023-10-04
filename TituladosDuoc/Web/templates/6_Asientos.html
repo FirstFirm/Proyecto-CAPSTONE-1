@@ -1,17 +1,71 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selección de Asientos</title>
-    <link rel="stylesheet" href="6_AsientosEstilo.css">
+    <link rel="stylesheet" href="{% static 'css/6_AsientosEstilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 </head>
 <body>
-    <h1>Selecciona tus asientos</h1>
-    <div class="plan">
-        <!-- Generación de asientos usando JavaScript -->
+    <!-- Enlace que desencadena la aparición del sidebar -->
+    <!-- <button id="sidebar-trigger" class="custom-button">
+        <i class="fas fa-bars"></i>
+    </button> -->
+
+
+    <!-- Sidebar -->
+    <div id="sidebar-desplegable" class="sidebar-desplegable">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="Logo DUOC UC">
+                <!-- Botón de cierre del sidebar -->
+                <button id="cerrar-sidebar" class="cerrar-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="sidebar-menu">
+                <li>1.- Detalles del proceso.</li>
+                <li>2.- Registrar firma electrónica de asistencia.</li>
+                <li>3.- Registro de invitado.</li>
+                <li class="li-detalle">4.- Elección de asientos.</li>
+            </ul>
+            <p class="p-sidebar">Si presentas algún problema comunícate con la Mesa de Servicios:</p>
+            <p class="p-sidebar">(+56) 44220 1098</p>
+            <p class="p-sidebar">(+56) 227120245</p>
+            <p class="p-sidebar">Servicios Académicos</p>
+            <p class="p-sidebar">Servicios de Financiamiento</p>
+            <p class="p-sidebar">Servicios de Vida Estudiantil</p>
+            <p class="p-sidebar">Servicios Tecnológicos</p>
+            <p class="p-sidebar">Otros Servicios</p>
+            <p class="p-sidebar">WhatsApp: </p>
+        </div>
     </div>
+
+    <!-- Contenido principal -->
+    <h1>Selecciona tus asientos</h1>
+    <p>- Elige el asiento solo teniéndote en cuenta a tu preferencia según los asientos disponibles.</p>
+    <p>- Ten en cuenta que solo podrás escoger un asiento.</p>
+    <div class="container">
+        <div class="plan plan-izquierda">
+            <!-- Generación de asientos para el primer grupo -->
+        </div>
+        <div class="pasillo">
+            <p class="pasillo-p">Pasillo</p>
+        </div>
+        <div class="plan plan-derecha">
+            <!-- Generación de asientos para el segundo grupo -->
+        </div>
+    </div>
+    <div class="pasillo-inferior">
+        <p class="pasillo-p">Pasillo</p>
+    </div>
+    <p class="publico-p">Público</p>
+
     <button class="confirmar">Confirmar selección</button>
+
+    <script src="{% static '6_AsientosFuncion.js' %}"></script>
 </body>
-<script src="6_AsientosFuncion.js"></script>
 </html>
