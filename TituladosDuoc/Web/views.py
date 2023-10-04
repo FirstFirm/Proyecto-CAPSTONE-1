@@ -1,7 +1,11 @@
+from .models import Titulado
+from django.dispatch import receiver
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
 
 @login_required
 def DisenoLogin(request):
@@ -30,4 +34,9 @@ def login_view(request):
 
 def AsistenciaInvitado(request):
     return render(request, '7_AsistenciaInvitado.html')
+@receiver(post_save, sender=User)
+def create_titulado(sender, instance, created, **kwargs):
+    if created:
+        Titulado.objects.create(usuario=instance)
+
 # Create your views here.
