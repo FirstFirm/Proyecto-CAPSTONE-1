@@ -11,16 +11,15 @@ class Titulado(models.Model):
     ApellidoP = models.CharField(max_length=50)
     ApellidoM = models.CharField(max_length=50)
     NCeluda = models.CharField(max_length=10)
-    Celular = models.CharField(max_length=10)
-    Email = models.EmailField(unique=True)
     Carrera = models.CharField(max_length=50)
-    Codigo = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
+    CodigoAsiento = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     Invitado1 = models.CharField(max_length=50, null=True, blank=True)
     Invitado2 = models.CharField(max_length=50, null=True, blank=True)
 
-    def __str__(self):
-        return self.nombre
+def __str__(self):
+    return f"{self.Nombres} {self.ApellidoP} {self.ApellidoM}"
 @receiver(post_save, sender=User)
-def create_titulado(sender, instance, created, **kwargs):
-    if created:
-        Titulado.objects.create(usuario=instance)
+def create_or_update_titulado(sender, instance, created, **kwargs):
+    # Utiliza get_or_create para obtener o crear el objeto Titulado
+    titulado, created = Titulado.objects.get_or_create(usuario=instance)
+
