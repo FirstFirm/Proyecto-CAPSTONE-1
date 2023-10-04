@@ -103,6 +103,21 @@ text-decoration: none;
   border-bottom: 2px solid var(--amarillo);
 }
 
+.p-sidebar-title{
+  text-align: justify;
+  color: var(--azul);
+}
+
+.p-sidebar{
+  text-align: center;
+  color: var(--azul);
+}
+
+.wsp {
+  color: var(--azul);
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 
 /* Leyenda H1 <h1>Ingresa tus datos con tu carnet en mano.</h1> */

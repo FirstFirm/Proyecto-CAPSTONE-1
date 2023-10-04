@@ -110,6 +110,22 @@ body::before {
     border-bottom: 2px solid var(--color-amarillo);
 }
 
+.p-sidebar-title{
+  text-align: justify;
+  color: var(--color-azul);
+}
+
+.p-sidebar{
+  text-align: center;
+  color: var(--color-azul);
+}
+
+.wsp {
+  color: var(--color-azul);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* Estilos para la sección de descripción (titulos) */
 .descripcion {
     width: 100%;

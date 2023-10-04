@@ -148,6 +148,22 @@
     background-color: var(--color-amarillo);
     color: var(--color-azul);
   }
+
+  .p-sidebar-title{
+    text-align: justify;
+    color: var(--color-azul);
+  }
+  
+  .p-sidebar{
+    text-align: center;
+    color: var(--color-azul);
+  }
+  
+  .wsp {
+    color: var(--color-azul);
+    text-decoration: underline;
+    font-weight: bold;
+  }
   
   h1 {
     color: var(--color-blanco);
