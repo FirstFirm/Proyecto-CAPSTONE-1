@@ -35,6 +35,8 @@
     <div class="data">
       <div class="card_data">
         <h2 id="h2_data">Rellena los campos según se indica.</h2>
+        <form method="post">
+        {% csrf_token %}
         <hr>
         <label class="label-input" for="rut">Ingresa tu RUT:</label>
         <input class="label-input" id="rut" name="rut" type="text" pattern="[a-z0-5]{8,}" required />
@@ -42,6 +44,7 @@
         <input class="label-input" id="num_cedula" name="num_cedula" type="text" pattern="[a-z0-5]{8,}" required />
         <hr>
         <input type="submit" value="Siguiente" />
+      </form>
       </div>
   </body>
 </html>
