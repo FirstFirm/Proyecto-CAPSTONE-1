@@ -1,0 +1,258 @@
+/* Definición de variables de color */
+:root {
+  --color-azul: rgb(0, 40, 85);
+  --color-amarillo: #FFB800;
+  --color-negro: #1a1a1a;
+  --color-terciario: #000000;
+  --color-blanco: #FFFFFF;
+  --color-blanco-alternativo: rgba(238, 238, 238, 1);
+  --color-gris: #666666;
+}
+
+/* Tamaño de fuente base para el rem */
+html {
+  font-size: 62.5%;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+  background-color: var(--color-gris);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Merriweather', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+  background-size: 100% 100%; /* Cambio a 100% 100% para que la imagen cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Opcional: fija la imagen de fondo si lo deseas */
+}
+
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -3.3%;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(0.3px);
+  z-index: -1;
+}
+
+.descripcion p {
+  color: var(--color-blanco);
+  margin-bottom: 0.5vh;
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+  background-color: var(--color-blanco-alternativo);
+  color: var(--color-azul);
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  text-align: start;
+}
+
+a {
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar-header img {
+  width: 150px;
+  max-width: 100%;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu .li-invitado{
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-amarillo);
+  color: var(--color-azul);
+}
+
+
+/* .sidebar-menu li:hover {
+  background-color: var(--amarillo);
+  color: var(--azul);
+}
+*/
+
+.sidebar-menu li:first-child {
+  border-top: 2px solid var(--color-amarillo);
+}
+
+.sidebar-menu li:last-child {
+  border-bottom: 2px solid var(--color-amarillo);
+}
+
+.p-sidebar-title{
+text-align: justify;
+}
+
+.p-sidebar{
+text-align: center;
+}
+
+.wsp {
+color: var(--color-azul);
+text-decoration: underline;
+font-weight: bold;
+}
+
+/* Estilos para la sección de descripción (titulos) */
+.descripcion {
+width: 100%;
+text-align: center;
+margin: auto;
+padding: 2rem;
+margin-left: 250px;
+max-width: calc(100% - 250px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.descripcion h1 {
+  color: var(--color-blanco);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Estilos para la sección de datos (formulario) */
+.data {
+width: 45%;
+max-width: 600px;
+padding: 2rem;
+background-color: var(--color-blanco);
+border: 1px solid #FFB800;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+position: relative;
+bottom: 21vh;
+left: 10%;
+padding-left: 1px;
+}
+
+
+.data h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--color-azul);
+  text-align: center;
+  background-color: var(--color-blanco);
+}
+
+/* Estilos para Inputs y los labels */
+.label-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+label {
+  font-size: 1.4rem;
+  color: var(--color-negro);
+  text-align: left;
+  margin-bottom: 0.2rem;
+}
+
+.input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  width: 100%; 
+}
+
+.input:focus {
+  outline: none; 
+  border-color: var(--color-azul); 
+}
+
+/* Estilos para el botón de submit */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--color-amarillo);
+  color: var(--color-terciario);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background-color: #003669;
+  border: 1px solid var(--color-amarillo);
+  color: var(--color-blanco);
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas pequeñas (menos de 768px) */
+  .sidebar {
+      width: 100%;
+  }
+
+  .sidebar-menu li {
+      padding: 15px 20px;
+      text-align: center;
+  }
+
+  .descripcion,
+  .data {
+      width: 90%;
+      max-width: none;
+      padding: 1rem;
+      margin-left: 0;
+  }
+
+  .descripcion h1 {
+      font-size: 1.6rem;
+  }
+
+  .data h2 {
+      font-size: 1.4rem;
+  }
+
+  body {
+      height: auto;
+  }
+}

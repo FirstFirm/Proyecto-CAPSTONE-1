@@ -30,6 +30,8 @@ def custom_login(request):
 
     return render(request, 'login.html', {'form': form})
 
+def asientos(request):
+    return render(request, '6_Asientos.html')
 
 def AsistenciaInvitado(request):
     return render(request, '7_AsistenciaInvitado.html')

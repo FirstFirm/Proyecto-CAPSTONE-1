@@ -1,4 +1,5 @@
 {% load static %}
+<script src="{% static 'js/6_AsientosFuncion.js' %}"></script>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +24,7 @@
             <li>2.- Registrar firma electrónica de asistencia.</li>
             <li class="li-invitado">3.- Registro de invitado.</li>
             <li>4.- Elección de asientos.</li>
+            <li>Sesión iniciada como: {{ user.username }} </li>
         </ul>
         <p class="p-sidebar-title">Si presentas algún problema comunicate con la Mesa de Servicios:</p>
         <p class="p-sidebar">(+56) 44220 1098</p>
@@ -40,7 +42,7 @@
         <div class="card-data">
             <h2 id="h2-data">Rellena los campos según se indica.</h2>
             <hr>
-            <form method="post">
+            <form method="post" action="{% url 'Asientos' %}">
                 {% csrf_token %}
             <label class="label-input" for="nombre-acompanante1">Nombre completo de tu primer acompañante:</label>
             <input class="input" id="nombre-acompanante1" name="nombre-acompanante1" type="text" placeholder="Opcional"/>

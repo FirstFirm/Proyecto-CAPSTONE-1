@@ -17,12 +17,18 @@ Including another URLconf
 import django
 from django.contrib import admin
 from django.urls import path
-from Web.views import custom_login, DisenoFirma, Confirmacion, AsistenciaInvitado
+from Web.views import custom_login, DisenoFirma, Confirmacion, AsistenciaInvitado, asientos
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', custom_login, name='login'),
     path('Diseño_firma', DisenoFirma, name='firma'),
     path('Confirmacion', Confirmacion, name='Confirmacion'),
     path('AsistenciaInvitado', AsistenciaInvitado, name='AInvitado'),
+    path('Asientos', asientos, name='Asientos'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

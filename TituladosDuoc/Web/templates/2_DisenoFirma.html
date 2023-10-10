@@ -18,6 +18,7 @@
         <li class="li-detalle">2.- Registrar firma electrónica de asistencia.</li>
         <li>3.- Registro de invitado.</li>
         <li>4.- Elección de asientos.</li>
+        <li>Sesión iniciada como: {{ user.username }} </li>
       </ul>
       <p class="p-sidebar">Si presentas algún problema comunicate con la Mesa de Servicios:</p>
         <p class="p-sidebar">(+56) 44220 1098</p>
@@ -35,7 +36,7 @@
     <div class="data">
       <div class="card_data">
         <h2 id="h2_data">Rellena los campos según se indica.</h2>
-        <form method="post">
+        <form method="post" action="{% url 'AInvitado' %}">
         {% csrf_token %}
         <hr>
         <label class="label-input" for="rut">Ingresa tu RUT:</label>

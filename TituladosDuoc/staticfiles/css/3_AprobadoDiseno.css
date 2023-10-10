@@ -1,0 +1,79 @@
+:root {
+    --azul: rgb(0, 40, 85);
+    --amarillo: #FFB800;
+    --negro: #1a1a1a;
+    --terciario: #000000;
+    --blanco: #FFFFFF;
+    --blancoAlternativo: rgba(238, 238, 238, 1);
+    --gris: #666666;
+    --verde: #A1D884;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--gris);
+    font-family: 'Merriweather', serif;
+    color: var(--azul); /* Agregamos el color de texto aquí */
+}
+
+.container {
+    text-align: center;
+}
+
+.circle {
+    display: inline-block;
+    background-color: var(--azul);
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.checkmark {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 4px solid var(--amarillo);
+    border-radius: 50%;
+    color: var(--verde);
+}
+
+.gg-check {
+    transform: scale(6); 
+}
+
+.gg-check::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 70%;
+    border-width: 0 0 4px 4px;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .circle {
+        padding: 15%; 
+    }
+
+    .gg-check {
+        width: 80%;
+    }
+}

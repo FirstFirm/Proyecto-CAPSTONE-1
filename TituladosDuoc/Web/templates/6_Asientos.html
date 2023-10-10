@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -31,6 +32,7 @@
                 <li>2.- Registrar firma electrónica de asistencia.</li>
                 <li>3.- Registro de invitado.</li>
                 <li class="li-detalle">4.- Elección de asientos.</li>
+                <li>Sesión iniciada como: {{ user.username }} </li>
             </ul>
             <p class="p-sidebar">Si presentas algún problema comunícate con la Mesa de Servicios:</p>
             <p class="p-sidebar">(+56) 44220 1098</p>
@@ -66,6 +68,7 @@
 
     <button class="confirmar">Confirmar selección</button>
 
-    <script src="{% static '6_AsientosFuncion.js' %}"></script>
+
 </body>
+<script src="{% static '6_AsientosFuncion.js' %}"></script>
 </html>
