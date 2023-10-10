@@ -34,6 +34,8 @@ body {
 }
 
 
+
+
 body::before {
   content: '';
   position: absolute;
@@ -128,6 +130,16 @@ text-decoration: underline;
 font-weight: bold;
 }
 
+.cerrar-sesion{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-azul);
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 1vh;
+}
+
 /* Estilos para la sección de descripción (titulos) */
 .descripcion {
 width: 100%;
@@ -162,7 +174,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 position: relative;
-bottom: 21vh;
+bottom: 22vh;
 left: 10%;
 padding-left: 1px;
 }
