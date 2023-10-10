@@ -24,7 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80);
+  background-image: url(https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2500&q=80);
   overflow: hidden;  
   flex-direction: column;
   align-items: center;
@@ -104,7 +104,7 @@ text-decoration: none;
 }
 
 .p-sidebar-title{
-  text-align: justify;
+  text-align: center;
   color: var(--azul);
 }
 

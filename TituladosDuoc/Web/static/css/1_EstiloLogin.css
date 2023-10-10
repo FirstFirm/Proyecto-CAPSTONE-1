@@ -11,7 +11,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+  background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2500&q=80');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -34,7 +34,7 @@ body::before {
 }
 
 #h1t, #h2t {
-  color: rgba(238, 238, 238, 1);
+  color: var(--blanco);
   display: flex;
   justify-content: center;
   position: relative;
@@ -82,7 +82,7 @@ body::before {
 fieldset {
   border: 1px solid var(--amarillo);
   border-radius: 8px;
-  color: var(--blancoAlternativo);
+  color: var(--blanco);
 }
 
 .card input,
