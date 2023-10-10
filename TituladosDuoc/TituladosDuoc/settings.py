@@ -31,6 +31,11 @@ ALLOWED_HOSTS = []
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'Confirmacion'  # Redirección del inicio de sesión
 
+AUTHENTICATION_BACKENDS = [
+    'Web.backends.TituladoBackend', 
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
