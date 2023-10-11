@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Titulados Duoc</title>
     <link rel="stylesheet" href="{% static 'css/1_EstiloLogin.css' %}" />
-    <link rel="stylesheet" href="https://https://fonts.google.com/specimen/Merriweather">
   </head>
   <body>
     <h1 id="h1t">Duoc UC</h1>
@@ -13,15 +12,29 @@
     <div class="card">
     <h2>Ingrese sus datos</h1>
     <p>Rellene los datos según las credenciales usadas durante todo el semestre.</p>
+    <div id="alerta" class="custom-alert" style="display: {% if messages %}block{% else %}none{% endif %};">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    </div>
     <form method="post">
       {% csrf_token %}
       <fieldset>
-        <label for="username">Ingrese su usuario: <input id="username" name="username" type="text" required /></label>
-        <label for="password">Ingrese su contraseña: <input id="password" name="password" type="password" required /></label>
+        <label for="username">Ingrese su usuario: <input id="username" name="username" type="text" required autocomplete="username" /></label>
+        <label for="password">Ingrese su contraseña: <input id="password" name="password" type="password" required autocomplete="current-password" /></label>
       </fieldset>
       <input type="submit" value="Siguiente" />
-
     </form>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var alerta = document.getElementById("alerta");
+  
+      // Muestra la alerta si hay un mensaje de error y no está vacía
+      if (alerta && alerta.innerText.trim() !== "") {
+        alerta.style.display = "block";
+      }
+    });
+  </script>
   </body>
   </html> 

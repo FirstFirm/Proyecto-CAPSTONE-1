@@ -4,9 +4,9 @@ from .models import Titulado
 class TituladoBackend(BaseBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         try:
-            user = Titulado.objects.get(username=username)
-            if user.password == password:
-                return user
+            username = Titulado.objects.get(username=username)
+            if username.password == password:
+                return username
         except Titulado.DoesNotExist:
             return None
 

@@ -100,6 +100,12 @@ fieldset {
 .card input[type="file"] {
   padding: 5px;
 }
+.custom-alert {
+  background-color: #f44336; /* Color de fondo rojo */
+  color: white; /* Texto en blanco */
+  padding: 10px; /* Espaciado interno */
+  display: none; /* Inicialmente oculto */
+}
 
 @media (max-width: 768px) {
   body {

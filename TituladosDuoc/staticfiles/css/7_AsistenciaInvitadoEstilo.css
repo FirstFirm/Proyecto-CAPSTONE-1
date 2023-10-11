@@ -5,7 +5,7 @@
   --color-negro: #1a1a1a;
   --color-terciario: #000000;
   --color-blanco: #FFFFFF;
-  --color-blanco-alternativo: rgba(238, 238, 238, 1);
+  --color-blanco-alternativo: #FFFFFF;
   --color-gris: #666666;
 }
 
@@ -27,10 +27,10 @@ body {
   flex-direction: column; 
   align-items: center; 
   min-height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
-  background-size: 100% 100%; /* Cambio a 100% 100% para que la imagen cubra todo el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-attachment: fixed; /* Opcional: fija la imagen de fondo si lo deseas */
+  background-image: url(https://images.unsplash.com/photo-1593448450897-164ce1b9a4d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
 
@@ -53,7 +53,7 @@ body::before {
 
 /* Estilos para el sidebar */
 .sidebar {
-  background-color: var(--color-blanco-alternativo);
+  background-color: var(--color-blanco);
   color: var(--color-azul);
   width: 250px;
   height: 100%;
@@ -115,7 +115,7 @@ a {
 }
 
 .p-sidebar-title{
-text-align: justify;
+text-align: center;
 }
 
 .p-sidebar{

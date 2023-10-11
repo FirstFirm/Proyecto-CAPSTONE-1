@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .forms import TituladoLoginForm
 from .backends import TituladoBackend
+from django.contrib import messages
 
 def DisenoFirma(request):
     return render(request, '2_DisenoFirma.html')
@@ -22,7 +23,8 @@ def custom_login(request):
                 print(f"Usuario {username} autenticado con éxito")
                 return redirect('Confirmacion')
             else:
-                print("Autenticación fallida")
+                # Agregar un mensaje de error
+                messages.error(request, "Los datos ingresados son erróneos. Por favor, inténtalo de nuevo.")
         else:
             print("Formulario no válido")
     else:
