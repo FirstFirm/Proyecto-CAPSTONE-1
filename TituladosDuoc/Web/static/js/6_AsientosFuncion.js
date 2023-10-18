@@ -53,7 +53,7 @@ confirmarBtn.addEventListener("click", () => {
     }
 });
 
-function toggleSeatSelection(seat) {
+/*function toggleSeatSelection(seat) {
     if (selectedSeat && selectedSeat !== seat) {
         selectedSeat.classList.remove("selected");
     }
@@ -64,7 +64,7 @@ function toggleSeatSelection(seat) {
         seat.classList.remove("selected");
         selectedSeat = null;
     }
-}
+}*/
 
 function toggleSidebar() {
     if (!sidebarVisible) {
