@@ -281,8 +281,8 @@
   }
   
   .confirmar:hover {
-    background-color: var(--color-amarillo);
-    color: var(--color-negro);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     box-shadow: var(--color-negro) 2px 2px 2px 2px;
     font-weight: bolder;
   }
