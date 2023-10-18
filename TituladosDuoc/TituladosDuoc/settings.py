@@ -36,6 +36,7 @@ AUTHENTICATION_BACKENDS = [
     'Web.backends.TituladoBackend', 
     'django.contrib.auth.backends.ModelBackend',
 ]
+AUTH_USER_MODEL = 'Web.Titulado'
 
 # Application definition
 
