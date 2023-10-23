@@ -7,7 +7,7 @@ class Titulado(AbstractUser):
     username = models.CharField(max_length=100, unique=True, default='NombreUsuario')
     password = models.CharField(max_length=128, default='titulados')
     Run = models.CharField(max_length=11)
-    NCeluda = models.CharField(max_length=10)
+    NCedula = models.CharField(max_length=10)
     Carrera = models.CharField(max_length=50)
     NAsiento = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     Invitado1 = models.CharField(max_length=50, null=True, blank=True)

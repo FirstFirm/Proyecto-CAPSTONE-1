@@ -224,6 +224,11 @@ input[type="submit"]:hover {
   color: var(--blanco);
 }
 
+
+#alertarut {
+  color: #ff0000;
+}
+
 /*intento de hacerlo responsivo xdddd */
 
 @media (max-width: 768px) {
