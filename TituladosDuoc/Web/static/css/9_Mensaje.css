@@ -1,0 +1,96 @@
+:root {
+    --azul: rgb(0, 40, 85);
+    --amarillo: #FFB800;
+    --negro: #1a1a1a;
+    --terciario: #000000;
+    --blanco: #FFFFFF;
+    --blancoAlternativo: rgba(238, 238, 238, 1);
+    --gris: #666666;
+    --rojo: #D50032;
+  }
+  
+  body {
+    --azul: rgb(0, 40, 85);
+    --amarillo: #FFB800;
+    background: linear-gradient(135deg, var(--azul), var(--amarillo), var(--azul));
+    background-size: 400% 400%;
+    animation: backgroundMove 20s linear infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Merriweather', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  .mensaje {
+    position: relative;
+    background-color: var(--blancoAlternativo);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    animation: fadeIn 2s ease;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .mensaje:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ticket {
+    background: var(--azul);
+    color: var(--blanco);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    color: var(--azul);
+    font-size: 24px;
+  }
+  
+  p {
+    color: var(--negro);
+    font-size: 18px;
+  }
+  
+  /* Media queries para pantallas chicas */
+  @media (max-width: 768px) {
+    .mensaje {
+      max-width: 100%; 
+      height: 100vh; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ticket {
+        background: var(--azul);
+        color: var(--blanco);
+        padding: 20px; 
+        border-radius: 0; 
+        box-shadow: none; 
+        width: 100%; 
+        font-size: 24px; 
+      }
+  
+    h1 {
+      font-size: 32px; 
+    }
+  
+    p {
+      font-size: 24px; 
+    }
+  }
+  
