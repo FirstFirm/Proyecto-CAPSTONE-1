@@ -26,7 +26,7 @@
             <li>4.- Elección de asientos.</li>
             <li>Sesión iniciada como: {{ user.username }} </li>
         </ul>
-        <a class="cerrar-sesion" href="{% url 'login' %}">Cerrar Sesión</a>
+        <a class="cerrar-sesion" href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
         <p class="p-sidebar-title">Si presentas algún problema comunicate con la Mesa de Servicios:</p>
         <p class="p-sidebar">(+56) 44220 1098</p>
         <p class="p-sidebar">(+56) 227120245</p>
@@ -43,12 +43,12 @@
         <div class="card-data">
             <h2 id="h2-data">Rellena los campos según se indica.</h2>
             <hr>
-            <form method="post" action="{% url 'Asientos' %}">
+            <form method="post" action="{% url 'AInvitado' %}">
                 {% csrf_token %}
             <label class="label-input" for="nombre-acompanante1">Nombre completo de tu primer acompañante:</label>
-            <input class="input" id="nombre-acompanante1" name="nombre-acompanante1" type="text" placeholder="Opcional"/>
+            <input class="input" id="nombre-acompanante1" name="nombre_acompanante1" type="text" placeholder="Opcional"/>
             <label class="label-input" for="nombre-acompanante2">Nombre completo de tu segundo acompañante: </label>
-            <input class="input" id="nombre-acompanante2" name="nombre-acompanante2" type="text"  placeholder="Opcional" />
+            <input class="input" id="nombre-acompanante2" name="nombre_acompanante2" type="text"  placeholder="Opcional" />
             <hr>
             <input type="submit" value="Siguiente" />
             </form>

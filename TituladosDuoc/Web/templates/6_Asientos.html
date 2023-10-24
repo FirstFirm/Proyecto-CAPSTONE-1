@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selección de Asientos</title>
+    <title>Muestra de Asientos</title>
     <link rel="stylesheet" href="{% static 'css/6_AsientosEstilo.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
@@ -48,6 +48,7 @@
 
     <!-- Contenido principal -->
     <h1>Este es tu asiento para el día de la ceremonia</h1>
+    <h1>Tu número de asiento corresponde al: {{ user.NAsiento }}</h1>
     <p>- Ten en cuenta que este es el asiento que te corresponde a ti para la ceremonia de titulación.</p>
     <p>- Tus invitados estaran con el público ese día.</p>
     <div class="container">
@@ -66,7 +67,9 @@
     </div>
     <p class="publico-p">Público</p>
 
-    <button class="confirmar">Finalizar proceso</button>
+    <a href="{% url 'resumen' %}">
+        <button class="confirmar">Finalizar proceso</button>
+    </a>
 
 
 </body>

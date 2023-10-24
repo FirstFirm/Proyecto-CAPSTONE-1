@@ -1,9 +1,11 @@
 from .models import Titulado
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from .forms import TituladoLoginForm, ValidarDatosForm
+from .forms import TituladoLoginForm, ValidarDatosForm, InvitadoForm
 from .backends import TituladoBackend
 from django.contrib import messages
+from django.contrib.auth import logout
+
 
 def DisenoFirma(request):
     if request.method == 'POST':
@@ -33,6 +35,8 @@ def DisenoFirma(request):
 
 def Confirmacion(request):
     return render(request, '5_Confirmacion.html')
+def resumen(request):
+    return render(request, '9_Mensaje.html')
 def custom_login(request):
     if request.method == 'POST':
         form = TituladoLoginForm(request.POST)
@@ -56,7 +60,32 @@ def custom_login(request):
     return render(request, 'login.html', {'form': form})
 
 def asientos(request):
-    return render(request, '6_Asientos.html')
+
+    titulado = request.user
+    return render(request, '6_Asientos.html', {'user': titulado})
 
 def AsistenciaInvitado(request):
-    return render(request, '7_AsistenciaInvitado.html')
+    if request.method == 'POST':
+        form = InvitadoForm(request.POST)
+        if form.is_valid():
+            nombre_acompanante1 = form.cleaned_data['nombre_acompanante1']
+            nombre_acompanante2 = form.cleaned_data['nombre_acompanante2']
+
+            # Obtén al usuario autenticado (titulado)
+            titulado = request.user
+
+            # Actualiza los campos de invitados en el modelo Titulado
+            titulado.Invitado1 = nombre_acompanante1
+            titulado.Invitado2 = nombre_acompanante2
+            titulado.save()
+
+            # Redirige a la siguiente vista, la elección de asientos
+            return redirect('Asientos')
+    else:
+        form = InvitadoForm()
+
+    return render(request, '7_AsistenciaInvitado.html', {'form': form})
+
+def cerrar_sesion(request):
+    logout(request)
+    return redirect('login')  # Redirige al usuario a la página de inicio de sesión

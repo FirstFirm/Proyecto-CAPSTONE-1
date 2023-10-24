@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% 'static 9_Mensaje.css' %}">
+    <link rel="stylesheet" href="{% static 'css/9_Mensaje.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <title>Mensaje</title>
 </head>
 <body>
     <div class="mensaje">
-        <div class="ticket">Éxito</div>
+        <div class="ticket">Se ha completado el proceso</div>
         <h1>Se ha enviado un correo a su dirección de correo electrónico.</h1>
+        <p>Resumiendo el proceso de asisitencia estos son los datos:</p>
+        <p>Rut asociado:{{ user.Run }}</p>
+        <p>Carrera: {{ user.Carrera }}</p>
+        <p>Número de asiento: {{ user.NAsiento }}</p>
+        <p>Nombre primer invitado: {{ user.Invitado1 }}</p>
+        <p>Nombre segundo invitado: {{ user.Invitado2 }}</p>
+        <h2>No olvides que ese día debes firmar el libro de asistencia:</h2>
+        <p>Número de página donde debe firmar: {{ user.PaginaLibro }}</p>
+
         <p>¡Muchas gracias por usar nuestro servicio!</p>
+        <p>Ya puede cerrar esta ventana</p>
     </div>
 </body>
 </html>

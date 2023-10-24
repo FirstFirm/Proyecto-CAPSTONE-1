@@ -1,4 +1,4 @@
-import uuid
+
 from django.db import models
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import AbstractUser
@@ -9,7 +9,8 @@ class Titulado(AbstractUser):
     Run = models.CharField(max_length=11)
     NCedula = models.CharField(max_length=10)
     Carrera = models.CharField(max_length=50)
-    NAsiento = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
+    NAsiento = models.CharField(max_length=3, unique=True)
+    PaginaLibro = models.CharField(max_length=3, default='0')
     Invitado1 = models.CharField(max_length=50, null=True, blank=True)
     Invitado2 = models.CharField(max_length=50, null=True, blank=True)
     last_login = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -29,6 +30,7 @@ class Titulado(AbstractUser):
     )
 
     def save(self, *args, **kwargs):
-        # Hashear la contraseña antes de guardarla
-        self.password = make_password(self.password)
+        # Hashear la contraseña solo si es una contraseña nueva o está siendo creada por primera vez
+        if self._state.adding or not self.password.startswith("pbkdf2_sha256$"):
+            self.password = make_password(self.password)
         super().save(*args, **kwargs)
