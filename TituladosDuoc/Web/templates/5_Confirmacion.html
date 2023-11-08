@@ -56,7 +56,10 @@
             <li>Selecciona el lugar que eligiras para el dia de la ceremonia, teniendo en cuenta tus invitados y a ti mismo.</li>
         </ol>
         <p>Una vez que hayas firmado digitalmente, se registrará tu confirmación de asistencia y recibirás un correo electrónico de confirmación.</p>
-        <a href="{% url 'firma' %}" class="btn-form">Siguiente</a>
+        <div class="btn-container">
+            <a href="{% url 'firma' %}" class="btn-form">Siguiente</a>
+            <a href="{% url 'firma' %}" class="btn-form">Ver libro</a>
+        </div>
     </div>
 </body>
 </html>

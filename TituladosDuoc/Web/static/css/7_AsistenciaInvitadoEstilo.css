@@ -77,7 +77,7 @@ a {
 }
 
 .sidebar-header img {
-  width: 150px;
+  width: 80%;
   max-width: 100%;
 }
 
@@ -140,6 +140,13 @@ font-weight: bold;
   margin-top: 1vh;
 }
 
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Estilos para la sección de descripción (titulos) */
 .descripcion {
 width: 100%;
@@ -162,9 +169,9 @@ align-items: center;
 
 /* Estilos para la sección de datos (formulario) */
 .data {
-width: 45%;
+width: 90%;
 max-width: 600px;
-padding: 2rem;
+padding: 2.5%;
 background-color: var(--color-blanco);
 border: 1px solid #FFB800;
 border-radius: 10px;
@@ -173,10 +180,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-position: relative;
-bottom: 22vh;
-left: 10%;
 padding-left: 1px;
+margin-left: 250px;
 }
 
 
@@ -240,12 +245,7 @@ input[type="submit"]:hover {
 @media screen and (max-width: 768px) {
   /* Estilos para pantallas pequeñas (menos de 768px) */
   .sidebar {
-      width: 100%;
-  }
-
-  .sidebar-menu li {
-      padding: 15px 20px;
-      text-align: center;
+      display: none;
   }
 
   .descripcion,
@@ -254,6 +254,10 @@ input[type="submit"]:hover {
       max-width: none;
       padding: 1rem;
       margin-left: 0;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      
   }
 
   .descripcion h1 {

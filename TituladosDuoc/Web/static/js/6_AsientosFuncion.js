@@ -1,49 +1,52 @@
 const planIzquierda = document.querySelector(".plan-izquierda");
 const planDerecha = document.querySelector(".plan-derecha");
 const confirmarBtn = document.querySelector(".confirmar");
-const triggerElement = document.querySelector("#sidebar-trigger");
-const sidebarDesplegable = document.querySelector("#sidebar-desplegable");
-const cerrarSidebarBtn = document.querySelector("#cerrar-sidebar");
-let sidebarVisible = false;
 
-let selectedSeat = null;
+const numRowsPerGroup = 12;  
+const numColsPerGroup = 20;  
 
-const numRowsPerGroup = 12;
-const numColsPerGroup = 9;
 
 for (let row = 1; row <= numRowsPerGroup; row++) {
-    const seatRow = document.createElement("div");
-    seatRow.classList.add("seat-row");
+    const seatRowIzquierda = document.createElement("div");
+    seatRowIzquierda.classList.add("seat-row");
+  
     for (let col = 1; col <= numColsPerGroup; col++) {
-        const asiento = document.createElement("div");
-        asiento.classList.add("asiento");
-        const seatNumber = (row - 1) * numColsPerGroup + col;
-        asiento.textContent = seatNumber;
-        seatRow.appendChild(asiento);
-
-        asiento.addEventListener("click", () => {
-            toggleSeatSelection(asiento);
-        });
+      const asientoIzquierda = document.createElement("div");
+      asientoIzquierda.classList.add("asiento");
+  
+      const seatNumberIzquierda = (col - 1) * numRowsPerGroup + row;
+  
+      asientoIzquierda.textContent = seatNumberIzquierda;
+      seatRowIzquierda.appendChild(asientoIzquierda);
+  
+      asientoIzquierda.addEventListener("click", () => {
+        toggleSeatSelection(asientoIzquierda);
+      });
     }
-    planIzquierda.appendChild(seatRow);
-}
-
-for (let row = 1; row <= numRowsPerGroup; row++) {
-    const seatRow = document.createElement("div");
-    seatRow.classList.add("seat-row");
+  
+    planIzquierda.appendChild(seatRowIzquierda);
+  }
+  
+  for (let row = 1; row <= numRowsPerGroup; row++) {
+    const seatRowDerecha = document.createElement("div");
+    seatRowDerecha.classList.add("seat-row");
+  
     for (let col = 1; col <= numColsPerGroup; col++) {
-        const asiento = document.createElement("div");
-        asiento.classList.add("asiento");
-        const seatNumber = (row - 1) * numColsPerGroup + col + 108;
-        asiento.textContent = seatNumber;
-        seatRow.appendChild(asiento);
-
-        asiento.addEventListener("click", () => {
-            toggleSeatSelection(asiento);
-        });
+      const asientoDerecha = document.createElement("div");
+      asientoDerecha.classList.add("asiento");
+  
+      const seatNumberDerecha = (col - 1) * numRowsPerGroup + row + 250; // Modificado
+  
+      asientoDerecha.textContent = seatNumberDerecha;
+      seatRowDerecha.appendChild(asientoDerecha);
+  
+      asientoDerecha.addEventListener("click", () => {
+        toggleSeatSelection(asientoDerecha);
+      });
     }
-    planDerecha.appendChild(seatRow);
-}
+  
+    planDerecha.appendChild(seatRowDerecha);
+  }
 
 /*confirmarBtn.addEventListener("click", () => {
     if (selectedSeat) {
@@ -66,7 +69,8 @@ for (let row = 1; row <= numRowsPerGroup; row++) {
     }
 }*/
 
-function toggleSidebar() {
+
+/* function toggleSidebar() {
     if (!sidebarVisible) {
         sidebarDesplegable.style.right = "0"; 
     } else {
@@ -75,4 +79,4 @@ function toggleSidebar() {
     sidebarVisible = !sidebarVisible;
 }
 
-triggerElement.addEventListener("click", toggleSidebar);
+triggerElement.addEventListener("click", toggleSidebar);*/
