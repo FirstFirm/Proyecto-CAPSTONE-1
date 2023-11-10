@@ -17,7 +17,7 @@ Including another URLconf
 import django
 from django.contrib import admin
 from django.urls import path
-from Web.views import custom_login, DisenoFirma, Confirmacion, AsistenciaInvitado, asientos, cerrar_sesion, resumen
+from Web.views import custom_login, DisenoFirma, Confirmacion, AsistenciaInvitado, asientos, cerrar_sesion, resumen, libro
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -30,6 +30,7 @@ urlpatterns = [
     path('Asientos', asientos, name='Asientos'),
     path('cerrar_sesion', cerrar_sesion, name='cerrar_sesion'),
     path('resumen', resumen, name='resumen'),
+    path('FirmaLibro', libro, name='FirmaLibro'),
 ]
 
 if settings.DEBUG:

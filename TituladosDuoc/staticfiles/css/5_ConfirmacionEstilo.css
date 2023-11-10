@@ -40,6 +40,21 @@ body::before {
   z-index: -1;
 }
 
+/*.contenido-container {
+  max-height: 80vh; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.texto-container {
+  max-width: 50%; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+*/
 
 .header, .sidebar {
   text-align: center;
@@ -57,13 +72,14 @@ body::before {
   align-items: center;
   flex-direction: column;
   text-align: justify;
-  width: 35%;
   padding: 20px;
   color: var(--blanco);
   background-color: var(--azul);
-  border:  2px solid var(--amarillo);
+  border: 2px solid var(--amarillo);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  max-height: 100vh;
+  width: 40%;
 }
 
 h1 {
@@ -110,7 +126,7 @@ a {
 }
 
 .sidebar-header img {
-  width: 150px;
+  width: 80%;
   max-width: 100%;
 }
 
@@ -164,11 +180,28 @@ a {
   font-weight: bold;
 }
 
+.cerrar-sesion{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-azul);
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 1vh;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 1vw;
+}
+
 .btn-form {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   padding: 10px 20px;
-  background-color: #FFB800; /* Fondo amarillo */
-  color: black; /* Texto en negro */
+  background-color: #FFB800; 
+  color: black; 
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -176,5 +209,35 @@ a {
 }
 
 .btn-form:hover {
-  background-color: #003669; /* Cambia el color al pasar el mouse */
+  background-color: var(--terciario); 
+  color: var(--blanco);
+  border: 1px solid var(--amarillo);
+}
+
+@media (max-width: 780px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -9vh;
+  }
+
+  .sidebar {
+    display: none
+  }
+
+  .texto {
+    order: 1; 
+    flex: 1; 
+    width: 100vw; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: 1rem; 
+    margin: 0; 
+    padding: 1rem; 
+    overflow: scroll; 
+   word-wrap: break-word;
+  }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libro de Titulaciones</title>
-    <link rel="stylesheet" href="{% 'static 8_Libro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/8_Libro.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,11 +13,12 @@
         <div class="mensaje">
             <h1>Firma en el Libro de Titulaciones</h1>
             <p>El número indicado a continuación representa la ubicación donde debes firmar en el libro.</p>
+            <p>Número de página donde debe firmar: {{ user.PaginaLibro }}</p>
         </div>
         <div class="numero">
             <h2>Página:</h2>
             <p class="pagina">7</p>
-            <input type="submit" value="Finalizar" />
+            <a href="{% url 'Confirmacion' %}" class="btn-form">Volver</a>
         </div>
     </div>
 </body>

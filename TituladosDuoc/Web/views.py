@@ -11,19 +11,18 @@ def DisenoFirma(request):
     if request.method == 'POST':
         form = ValidarDatosForm(request.POST)
         if form.is_valid():
-            # Obtén el RUT y el número de cédula ingresados en el formulario
+            # Se obtiene el RUT y el número de cédula ingresados en el formulario
             rut_ingresado = form.cleaned_data['rut']
             num_cedula_ingresado = form.cleaned_data['num_cedula']
 
-            # Busca en tu base de datos si existe un RUT y número de cédula válidos
+            # Se busca en la base de datos si existe un RUT y número de cédula válidos
             try:
                 registro_valido = Titulado.objects.get(Run=rut_ingresado, NCedula=num_cedula_ingresado)
             except Titulado.DoesNotExist:
                 registro_valido = None
 
             if registro_valido:
-                # El RUT y número de cédula son válidos, realiza la acción correspondiente
-                # Por ejemplo, podrías redirigir a la página de confirmación
+                # El RUT y número de cédula son válidos:
                 return redirect('AInvitado')
             else:
                 # El RUT o número de cédula no son válidos, muestra un mensaje de error
@@ -60,7 +59,6 @@ def custom_login(request):
     return render(request, 'login.html', {'form': form})
 
 def asientos(request):
-
     titulado = request.user
     return render(request, '6_Asientos.html', {'user': titulado})
 
@@ -89,3 +87,6 @@ def AsistenciaInvitado(request):
 def cerrar_sesion(request):
     logout(request)
     return redirect('login')  # Redirige al usuario a la página de inicio de sesión
+
+def libro(request):
+    return render(request, '8_Libro.html')

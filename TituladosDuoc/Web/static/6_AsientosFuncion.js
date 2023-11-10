@@ -45,27 +45,6 @@ for (let row = 1; row <= numRowsPerGroup; row++) {
     planDerecha.appendChild(seatRow);
 }
 
-/*confirmarBtn.addEventListener("click", () => {
-    if (selectedSeat) {
-        alert(`Has seleccionado el asiento: ${selectedSeat.textContent}`);
-    } else {
-        alert("Por favor, selecciona un asiento.");
-    }
-});*/
-
-/*function toggleSeatSelection(seat) {
-    if (selectedSeat && selectedSeat !== seat) {
-        selectedSeat.classList.remove("selected");
-    }
-    if (!seat.classList.contains("selected")) {
-        seat.classList.add("selected");
-        selectedSeat = seat;
-    } else {
-        seat.classList.remove("selected");
-        selectedSeat = null;
-    }
-}*/
-
 function toggleSidebar() {
     if (!sidebarVisible) {
         sidebarDesplegable.style.right = "0"; 

@@ -1,0 +1,123 @@
+:root {
+    --azul: rgb(0, 40, 85);
+    --amarillo: #FFB800;
+    --blanco: #FFFFFF;
+    --gris: #666666;
+    --negro: #1a1a1a;
+}
+
+body {
+    background: var(--azul) url("https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 1px solid var(--amarillo);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    max-width: 80%;
+}
+
+.mensaje h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.mensaje p {
+    font-size: 1.125rem;
+}
+
+.numero {
+    margin-top: 2rem;
+}
+
+.numero h2 {
+    font-size: 1.5rem;
+    color: var(--amarillo);
+    margin: 0;
+}
+
+.numero .pagina {
+    font-size: 2.25rem;
+    background-color: var(--amarillo);
+    color: var(--azul);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--negro);
+    border: 1px solid var(--amarillo);
+    color: var(--amarillo);
+}
+
+/* Para hacerlo responsivo */
+@media (max-width: 768px) {
+    body{
+        margin-top: -15vh;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 40%;
+        height: auto;
+    }
+
+    .mensaje {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    input[type="submit"] {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+    body {
+        margin-top: -30vh;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 1.5rem;
+        height: auto;
+    }
+
+    .mensaje {
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        font-size: 1.25rem;
+        padding: 1.5rem;
+    }
+}
