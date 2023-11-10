@@ -165,13 +165,12 @@ a {
 }
 
 .p-sidebar-title{
-  text-align: justify;
+  text-align: center;
   color: var(--azul);
 }
 
 .p-sidebar{
   text-align: center;
-  color: var(--azul);
 }
 
 .wsp {

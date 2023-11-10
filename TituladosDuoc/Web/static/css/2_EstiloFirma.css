@@ -61,7 +61,7 @@ text-decoration: none;
 }
 
 .sidebar-header {
-  padding: 2.5%;
+  padding: 20px;
   text-align: center;
 }
 
@@ -111,7 +111,6 @@ text-decoration: none;
 
 .p-sidebar{
   text-align: center;
-  color: var(--azul);
 }
 
 .wsp {

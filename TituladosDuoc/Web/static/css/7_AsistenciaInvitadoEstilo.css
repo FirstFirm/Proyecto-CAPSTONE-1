@@ -118,6 +118,7 @@ a {
 
 .p-sidebar-title{
 text-align: center;
+color: var(--color-azul);
 }
 
 .p-sidebar{
