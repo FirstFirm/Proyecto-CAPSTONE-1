@@ -58,6 +58,25 @@ body {
     border-radius: 5px;
 }
 
+.btn-form{
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-form:hover{
+    background-color: var(--negro);
+    border: 1px solid var(--amarillo);
+    color: var(--amarillo);
+}
+
 input[type="submit"] {
     display: block;
     width: 100%;
