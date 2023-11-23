@@ -170,7 +170,7 @@ p {
   pointer-events: none;
   color: var(--color-blanco);
   border: 1px solid var(--color-blanco);
-  width: 10%;
+  width: 30%;
 }
 
 .pasillo,
@@ -178,7 +178,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 30%;
 }
 
 .pasillo-inferior {
@@ -198,7 +198,7 @@ p {
 }
 
 .pasillo-inferior,
-.pasillo-p {
+.pasillo-p-inferior {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,6 +223,7 @@ p {
   font-size: 0.75rem;
   transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
+
 .selected {
   background-color: var(--color-negro);
   color: var(--color-blanco);
@@ -254,36 +255,7 @@ p {
   font-weight: bolder;
 }
 
-/* Media Query para pantallas medianas */
-@media (max-width: 768px) {
-  body {
-    background: var(--color-azul)
-  }
-
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.875rem;
-    margin: 1rem;
-  }
-
-  .pasillo-inferior {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-/* Media Query para pantallas pequeñas (por ejemplo, móviles) */
+/* Media Query para pantallas pequeñas*/
 @media (max-width: 728px) {
   body {
     background-color: var(--color-azul);
@@ -295,23 +267,87 @@ p {
     max-width: 100%;
   }
 
+
   h1 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     max-width: 100%;
   }
 
   p {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     margin: 0.5rem;
     max-width: 100%;
   }
 
-  .pasillo-inferior {
-    max-width: 100%;
-    margin: auto;
+  .pasillo {
+    background-color: transparent;
+    pointer-events: none;
+    color: var(--color-blanco);
+    border: 1px solid var(--color-blanco);
+    width: 10%;
+    position: relative;
+    right: 35px;
+  }
+  
+  .pasillo,
+  .pasillo-p {
     display: flex;
     align-items: center;
     justify-content: center;
+    writing-mode: vertical-rl; /* "rl" significa de derecha a izquierda, pero como queremos de arriba a abajo, es vertical-rl */
+    text-orientation: sideways;
+    width: 5%;
+    font-size: 0.5rem;
+  }
+
+  .pasillo-inferior, .pasillo-p-inferior {
+    max-width: 100%;
+    height: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 0.05rem;
+  }
+
+
+  .publico-p{
+    position: relative;
+    right: 0.6vw;
+  }
+
+  .asiento {
+    width: 0.9rem;
+    height: 0.9rem; 
+    background-color: var(--color-amarillo);
+    border: 1px solid var(--color-gris);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.45rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    position: relative;
+    right: 35px;
+  }
+
+  .confirmar {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    border: solid 1px var(--color-amarillo);
+    border-radius: 5px;
+    padding: 0.6rem 0.6rem;
+    cursor: pointer;
+    margin-top: 5vh;
+    margin-bottom: 10vw;
+    font-weight: bold;
+    font-size: 0.6rem;
+    transition: background-color 0.3s ease;
+    display: block;
     margin: 0 auto;
+    max-width: 9rem;
   }
 }
