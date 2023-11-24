@@ -58,8 +58,9 @@ body {
     border-radius: 5px;
 }
 
-.btn-form{
-    display: block;
+/*.btn-form{
+    display: flex;
+    justify-self: center;
     width: 100%;
     margin-top: 2rem;
     padding: 1rem;
@@ -75,11 +76,13 @@ body {
     background-color: var(--negro);
     border: 1px solid var(--amarillo);
     color: var(--amarillo);
-}
+}*/
 
-input[type="submit"] {
-    display: block;
-    width: 100%;
+
+.btn-container > a {
+    display: flex;
+    justify-content: center;
+    width: 60%;
     margin-top: 2rem;
     padding: 1rem;
     background-color: var(--amarillo);
@@ -88,12 +91,14 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.5s;
-}
+    text-decoration: none;
+} 
 
-input[type="submit"]:hover {
+.btn-container:hover > a {
     background-color: var(--negro);
     border: 1px solid var(--amarillo);
     color: var(--amarillo);
+    text-decoration: none;
 }
 
 /* Para hacerlo responsivo */
@@ -122,7 +127,7 @@ input[type="submit"]:hover {
 
 @media (min-width: 1024px) and (max-width: 1240px) {
     body {
-        margin-top: -30vh;
+        margin-top: -20vh;
     }
 
     .container {

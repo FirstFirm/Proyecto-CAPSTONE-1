@@ -59,8 +59,9 @@ body {
 }
 
 input[type="submit"] {
-    display: block;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
     margin-top: 2rem;
     padding: 1rem;
     background-color: var(--amarillo);
